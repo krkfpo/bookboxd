@@ -1,5 +1,5 @@
-import SearchBar from './SearchBar'
 import { BookOpen } from 'lucide-react';
+import SearchBar from './SearchBar'
 
 export default function Inicio () {
     return (
@@ -8,7 +8,7 @@ export default function Inicio () {
                 <BookOpen />Bookboxd
             </h1>
             <p className="text-center text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum deleniti quibusdam ea iste placeat molestias commodi accusantium ullam fugiat similique?</p>
-            <SearchBar />
+            <SearchBar/>
         </div>
     )
 }

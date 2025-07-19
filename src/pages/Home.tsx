@@ -1,17 +1,15 @@
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Header/Navbar';
 import Inicio from '../components/Inicio';
-import Catalago from '../components/Catalago';
+import BookList from '../components/BookList';
 
 export default function Home () {
     return (
         <>
         <Navbar />
-
-        <main className='w-full bg-zinc-700 min-h-screen flex flex-col items-center justify-center'>
+        <main className='main-content w-full min-h-screen bg-zinc-700 flex flex-col items-center justify-center'>
             <Inicio />
-            <Catalago />
+            <BookList/>
         </main>
-
         </>
     )
 }

@@ -1,19 +1,19 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import livros from '../data/livros'
 
-export default function Catalago() {
-  const navigate = useNavigate()
+export default function BookList () {
+    // Usando o react-router
+    const navigate = useNavigate()
 
-  function handleClick(id) {
-    navigate(`/Livros/${id}`)
-  }
-
-  return (
-    <>
-      <div className="grid grid-cols-5 gap-5 justify-center items-center">
+    function handleClick(id) {
+        navigate(`/Book/${id}`)
+    }
+    
+    return (
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 justify-center items-center">
         {livros.map((livro) => (
           <div
+            key={livro.id}
             className="relative group cursor-pointer"
             onClick={() => handleClick(livro.id)}  
           >
@@ -30,6 +30,5 @@ export default function Catalago() {
           </div>
         ))}
       </div>
-    </>
-  );
+    )
 }
