@@ -21,5 +21,5 @@ O **Bookboxd** é uma aplicação web desenvolvida para apaixonados por leitura 
 
 ## Próximos Passos ⏭️
 - [ ] Integração com a API (https://github.com/davittiw/bookboxd/issues/1)
-- [ ] Criar page 'Sobre o criador'
+- [ ] Criar page 'Sobre o criador' (https://github.com/davittiw/bookboxd/issues/2)
 - [ ] Adicionar animações
