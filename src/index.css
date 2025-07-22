@@ -8,6 +8,10 @@
     --font-family: 'Poppins', sans-serif;
 }
 
+body {
+    background-image: linear-gradient(to right, #1B0B26, #250A40, #6B14A6);
+}
+
 .nav-item {
     @apply cursor-pointer hover:text-green-gradient-3 transition-colors
 }

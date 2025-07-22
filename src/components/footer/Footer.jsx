@@ -2,7 +2,7 @@ import { Github, Linkedin, AtSign  } from 'lucide-react';
 
 export default function Footer () {
     return (
-        <footer className="bg-jet border-t-2 border-white/10 w-full h-20 sticky z-50 flex items-center justify-around flex-row">
+        <footer className="border-t-2 bg-zika border-white/10 absolute w-full h-20 z-10 flex items-center justify-around flex-row">
             <div className="footer-container-info">
                 <h1 className="text-white text-sm md:text-md">Developed by <a className="underline text-green-gradient-3 hover:text-green-gradient-2" href="https://davittiw.vercel.app/" target="_blank">@davittiw</a> © 2025</h1>
             </div>

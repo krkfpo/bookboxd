@@ -16,7 +16,7 @@ const Conheca = () => {
             </div>
             <div className="card-content-info-creator flex flex-col items-center justify-center text-gray-300">
               <h2 className="font-semibold">Luccas Davi | @davittiw</h2>
-              <p className='text-sm'>Creator of Bookboxd & Full-Stack Developer</p>
+              <p className='text-sm'>Creator and Full-Stack Developer</p>
             </div>
             <div className="card-content-redes-creator flex flex-row gap-2 justify-center">
               <a
