@@ -1,9 +1,10 @@
-import { useParams } from "react-router-dom";
-import livros from "../data/livros";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+
+import livros from "../../data/livros";
+import Navbar from "../header/Navbar"
+import HalfRating from "../HalfRating"
 import { MoveLeft, BookOpenText, Star } from 'lucide-react';
-import HalfRating from "./HalfRating";
-import Navbar from "./Header/Navbar";
+import Footer from "../footer/Footer";
 
 export default function CardBook () {
     const { id } = useParams()
@@ -15,9 +16,10 @@ export default function CardBook () {
     return (
         <>
             <Navbar/>
-            <div className="card-content bg-zinc-700 w-full min-h-screen flex flex-col justify-center items-center">
+            {/* Principal card book */}
+            <div className="card-content bg-jet w-full min-h-screen flex flex-col justify-center items-center">
 
-                <div className="card-main-content bg-zinc-600 shadow-md h-auto w-full max-w-[90vw] sm:max-w-[600px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[570px] flex flex-col justify-center md:flex-row lg:flex-row gap-2 md:gap-5 py-5 rounded-md">
+                <div className="card-main-content shadow-md h-auto w-full max-w-[90vw] sm:max-w-[600px] md:max-w-4xl flex flex-col justify-center md:flex-row lg:flex-row gap-2 md:gap-5 py-5 rounded-md">
 
                     {/* Imagem da capa do livro */}
                     <div className="card-image w-36 md:w-44 flex flex-col items-left gap-2">
@@ -44,6 +46,7 @@ export default function CardBook () {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     )
 }

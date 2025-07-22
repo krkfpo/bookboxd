@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import livros from '../data/livros'
+import livros from "../../data/livros";
 
 export default function BookList () {
     // Usando o react-router

@@ -37,7 +37,7 @@ export default function SearchBar() {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <button type="submit" aria-label="Buscar">
-          <Search />
+          <Search color='#A735F2'/>
         </button>
       </form>
     </div>

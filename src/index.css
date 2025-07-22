@@ -7,3 +7,7 @@
 :root {
     --font-family: 'Poppins', sans-serif;
 }
+
+.nav-item {
+    @apply cursor-pointer hover:text-green-gradient-3 transition-colors
+}
