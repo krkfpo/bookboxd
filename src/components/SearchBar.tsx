@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function SearchBar({
   onSearchResults,
 }: {
-  onSearchResults: (books: any[]) => void;
+  onSearchResults: (books: []) => void;
 }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(false);

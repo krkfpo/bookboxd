@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import React from "react";
 import BookList from '../components/book/BookList'
 
-export default function SearchResults() {
+export default function SearchResults({ books }) {
   const location = useLocation();
   const searchResults = location.state?.searchResults || [];
 
