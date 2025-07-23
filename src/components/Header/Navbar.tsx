@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import React from "react";
 import { BookOpen } from 'lucide-react';
 
 export default function Navbar () {
@@ -13,8 +14,8 @@ export default function Navbar () {
                 {/* Área de Navegação */}
                 <div className="header-navigation">
                     <ul className="flex flex-row gap-5 font-semibold">
-                        <li className="nav-item" onClick={() => navigate('/')}>Início</li>
-                        <li className="nav-item" onClick={() => navigate('/Sobre')}>Conheça</li>
+                        <li className="nav-item" onClick={() => navigate('/')}>Home</li>
+                        <li className="nav-item" onClick={() => navigate('/Sobre')}>About</li>
                     </ul>
                 </div>
             </nav>

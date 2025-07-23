@@ -126,7 +126,7 @@ export default function CardBook() {
           {/* Back button */}
           <button
             onClick={() => navigate(-1)}
-            className="absolute top-5 left-5 text-white hover:text-purple-400 transition-colors"
+            className="absolute top-5 left-2 bg-red-900/20 p-1 rounded-full left-5 text-white hover:text-purple-400 transition-colors"
           >
             <MoveLeft size={24} />
           </button>
@@ -157,7 +157,7 @@ export default function CardBook() {
             <p className="text-sm md:text-md text-white">
               {typeof livro.sinopse === "string"
                 ? livro.sinopse
-                : "Sinopse não disponível"}
+                : "Description not found"}
             </p>
 
             <div className="card-info-secundary md:text-sm text-gray-400 flex flex-col gap-2">
