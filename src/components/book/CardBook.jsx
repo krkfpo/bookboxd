@@ -3,7 +3,12 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../header/Navbar";
 import Footer from "../footer/Footer";
+import Footer from "../footer/Footer";
 import HalfRating from "../HalfRating";
+import { motion } from "framer-motion";
+
+import { MoveLeft, BookOpenText, Star } from "lucide-react";
+import RemoveMarkdown from "remove-markdown";
 import {
   MoveLeft,
   BookOpenText,
@@ -30,6 +35,8 @@ export default function CardBook() {
   const [editions, setEditions] = useState([]);
   const [selectedEdition, setSelectedEdition] = useState(null);
   const [workData, setWorkData] = useState(null);
+
+  const location = useLocation();
 
   useEffect(() => {
     const fetchBookData = async () => {
@@ -259,7 +266,7 @@ export default function CardBook() {
     <>
       <Navbar />
       <motion.main
-        className="main-content bg-gradient-to-br flex-grow from-jet via-zika to-green-gradient-2 animate-gradient w-full min-h-screen p-10 flex items-center justify-center"
+        className="main-content bg-gradient-to-br flex-grow from-jet via-zika to-green-gradient-2 animate-gradient w-full min-h-screen flex items-center justify-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
@@ -268,6 +275,7 @@ export default function CardBook() {
         <div className="card-main-content h-auto w-full max-w-[90vw] sm:max-w-[800px] lg:max-w-5xl backdrop-blur-sm bg-black/20 border border-white/20 rounded-xl flex flex-col md:flex-row justify-center gap-5 py-5 px-5 shadow-lg">
           <button
             onClick={() => navigate(-1)}
+            className="absolute z-50 top-5 md:left-3 left-100 bg-red-900/20 p-1 rounded-full text-white hover:text-purple-400 transition-colors"
             className="absolute z-50 top-5 md:left-3 left-100 bg-red-900/20 p-1 rounded-full text-white hover:text-purple-400 transition-colors"
           >
             <MoveLeft size={24} />
@@ -293,6 +301,17 @@ export default function CardBook() {
                 </span>
               </div>
             </div>
+
+          {/* Informações do livro */}
+          <div className="card-info flex gap-1 flex-col md:w-1/2">
+            <h1 className="font-bold text-2xl md:text-3xl text-white">
+              {livro.titulo}
+            </h1>
+
+            <h3 className="text-white font-semibold text-lg md:text-xl flex flex-row items-center gap-2">
+              <img className="w-8 rounded-full h-8" src={livro.autorFoto} alt="" />
+              {livro.autor}
+            </h3>
 
             {/* Basic Info */}
             <div className="bg-black/20 p-4 rounded-lg">

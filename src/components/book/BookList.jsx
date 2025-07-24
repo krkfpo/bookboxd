@@ -14,7 +14,7 @@ export default function BookList() {
         setLoading(true);
         // Fetch exactly 10 popular books from Open Library API
         const response = await fetch(
-          "https://openlibrary.org/search.json?q=subject:science&sort=editions&limit=10"
+          "https://openlibrary.org/search.json?q=subject:science&sort=editions&limit=20"
         );
 
         if (!response.ok) {
@@ -26,7 +26,7 @@ export default function BookList() {
         // Format the books data to match our expected structure
         const formattedBooks = data.docs
           .filter((book) => book.cover_i) // Only include books with covers
-          .slice(0, 10)
+          .slice(0, 20) // Ensure exactly 10 books
           .map((book, index) => ({
             id: book.key.replace("/works/", ""),
             titulo: book.title,
