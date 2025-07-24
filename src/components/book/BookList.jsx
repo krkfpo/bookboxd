@@ -26,7 +26,7 @@ export default function BookList() {
         // Format the books data to match our expected structure
         const formattedBooks = data.docs
           .filter((book) => book.cover_i) // Only include books with covers
-          .slice(0, 10) // Ensure exactly 10 books
+          .slice(0, 10)
           .map((book, index) => ({
             id: book.key.replace("/works/", ""),
             titulo: book.title,

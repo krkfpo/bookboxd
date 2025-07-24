@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function SearchBar({
   onSearchResults,
 }: {
-  onSearchResults: (books: any[]) => void;
+  onSearchResults?: (books: any[]) => void;
 }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -27,7 +27,7 @@ export default function SearchBar({
       const response = await fetch(
         `https://openlibrary.org/search.json?q=${encodeURIComponent(
           searchTerm
-        )}&limit=20`
+        )}&limit=200`
       );
 
       if (!response.ok) {
@@ -41,7 +41,6 @@ export default function SearchBar({
         return;
       }
 
-      // Process all books with cover images
       const booksWithCovers = data.docs
         .filter((book: any) => book.cover_i)
         .map((book: any) => ({
@@ -60,8 +59,8 @@ export default function SearchBar({
         return;
       }
 
-      // Pass the results to the parent component
-      onSearchResults(booksWithCovers);
+      onSearchResults?.(booksWithCovers);
+      navigate("/search", { state: { searchResults: booksWithCovers } });
     } catch (err) {
       setError("Erro ao conectar com o servidor. Tente novamente mais tarde.");
       console.error(err);
