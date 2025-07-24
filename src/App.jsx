@@ -9,8 +9,8 @@ import { AnimatePresence } from "framer-motion";
 
 import Home from "./pages/Home";
 import Sobre from "./pages/Sobre";
-import BookList from "./components/Book/BookList";
-import CardBook from "./components/Book/CardBook";
+import BookList from "./components/book/BookList";
+import CardBook from "./components/book/CardBook";
 import SearchResults from "./components/SearchResults";
 
 function AnimatedRoutes() {
